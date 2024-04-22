@@ -1,6 +1,28 @@
 // Complete the Index page component for an AI website that creates websites from prompts
 import { Box, Button, Container, Heading, Text, VStack, Image, Input, useColorModeValue } from "@chakra-ui/react";
-import { FaRobot, FaArrowRight } from "react-icons/fa";
+import { FaRobot, FaArrowRight, FaCheckCircle } from "react-icons/fa";
+
+const Features = () => {
+  return (
+    <VStack spacing={4} align="start">
+      <Heading as="h2" size="lg">
+        Features
+      </Heading>
+      <Box d="flex" alignItems="center">
+        <FaCheckCircle color="green" />
+        <Text ml={2}>Feature 1: Fully Automated</Text>
+      </Box>
+      <Box d="flex" alignItems="center">
+        <FaCheckCircle color="green" />
+        <Text ml={2}>Feature 2: Responsive Design</Text>
+      </Box>
+      <Box d="flex" alignItems="center">
+        <FaCheckCircle color="green" />
+        <Text ml={2}>Feature 3: SEO Optimized</Text>
+      </Box>
+    </VStack>
+  );
+};
 
 const Index = () => {
   const bgColor = useColorModeValue("gray.50", "gray.800");
@@ -27,6 +49,7 @@ const Index = () => {
             Create Website
           </Button>
         </Box>
+        <Features />
         <Box textAlign="center">
           <FaRobot size="3em" />
           <Heading as="h3" size="lg" mt={2}>
